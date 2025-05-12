@@ -31,5 +31,13 @@ public class Player {
         return builder.toString(); // Ganzer zusammengesetzter String also der "builder" zu einem String zurückgeben
     }
 
+    public ArrayList<Item> getInventory() { // Public Methode | gibt eine Array Liste zurück mit Item Objekten
+        return inventory; // gibt das inventory zurück also die array liste
+    }
+
+    public void removeItem(Item item) { // Public Methode | Ohne Rückgabe | bekommt ein item Objekt von dem Typ Item
+        inventory.remove(item); // enfernt aus dem inventory also aus der ArrayListe das item
+        currentWeight-= item.getWeight(); // currentWeight wird kleiner also currentWeight = currentWeight - item.getWeight(Gibt das Gewicht des item zurück)
+    }
 
 }
